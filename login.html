@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .input-form{
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 1.2em 0;
+        }
+
+        input, label, button{
+            transition: .3s;
+        }
+
+        label{
+            transform: translate(10px,-15px);
+            cursor: text;
+            transform-origin: left top;
+            position: absolute;
+        }
+
+        input{
+           padding: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid grey;
+        }
+
+        button{
+            border:0;
+            padding: 10px 15px;
+            cursor: pointer;
+            color:white;
+            background-color: #ff9234;
+        }
+
+        button:focus, button:hover{
+            background-color: #d92027;
+        }
+        .submit-form{
+            text-align:right;
+        }
+
+        input::placeholder{
+            opacity: 0;
+        }
+
+        input:focus, input:not(:placeholder-shown){
+            border-bottom: 2px solid red;
+        }
+
+        input:not(:placeholder-shown) ~ label, input:focus ~ label{
+            transform: translate(10px, -30px) scale(.8);
+            padding-left: 0;
+            color: #999999;
+        }
+
+    </style>
+</head>
+<body style="background-color: #333333">
+<div style="width:500px; margin:auto; background-color: white;padding: 3em">
+    <div class="input-form">
+        <input type="email" name="email" id="email" placeholder=""/>
+        <label for="email">Adresse email</label>
+    </div>
+    <div class="input-form">
+        <input type="password" name="password" id="password" placeholder=""/>
+        <label for="password">Mot de passe</label>
+    </div>
+    <div class="submit-form">
+        <button type="submit">Connexion</button>
+    </div>
+</div>
+</body>
+</html>
