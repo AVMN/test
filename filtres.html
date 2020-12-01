@@ -1106,7 +1106,7 @@
 <h2>Particules</h2>
 
 <div  style="height: 300px;width: 500px">
-    <div style="background: #222;"id="container"></div>
+    <div style="background: #222;height: 100%;width: 100%"id="container"></div>
 </div>
 <script src="js/sketch.min.js"></script>
 <script>
@@ -1238,7 +1238,6 @@
     demo.mousemove = function() {
 
         var particle, theta, force, touch, max, i, j, n;
-
         for ( i = 0, n = demo.touches.length; i < n; i++ ) {
 
             touch = demo.touches[i], max = random( 1, 4 );
